@@ -1,5 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { MyLibComponent } from './my-lib.component';
 
 describe('MyLibComponent', () => {
@@ -8,10 +10,9 @@ describe('MyLibComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReactiveFormsModule, FormsModule],
-      declarations: [ MyLibComponent ]
-    })
-    .compileComponents();
+      imports: [CommonModule, BrowserModule, FormsModule, ReactiveFormsModule],
+      declarations: [MyLibComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
