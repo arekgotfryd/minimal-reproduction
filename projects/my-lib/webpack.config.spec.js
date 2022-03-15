@@ -29,6 +29,7 @@ module.exports = {
   plugins: [
     new AngularCompilerPlugin({
       tsConfigPath: path.join(__dirname, "tsconfig.spec.json"),
+      skipCodeGeneration: true
     }),
     new webpack.ProgressPlugin({
       // profile: true,
