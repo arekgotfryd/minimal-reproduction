@@ -1,0 +1,14 @@
+<form [formGroup]="linkingForm">
+  <label class="linkFromVariableLabel" for="linkFromVariable"
+    >Link From Variable</label
+  >
+  <select
+    class="form-control"
+    name="linkFromVariable"
+    formControlName="linkFromVariable"
+  >
+    <option *ngFor="let variable of linkFromVariables" [value]="variable">
+      {{ variable.getDescription() }}
+    </option>
+  </select>
+</form>
